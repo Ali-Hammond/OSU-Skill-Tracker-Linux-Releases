@@ -6,7 +6,6 @@ Version `0.1.0` is the current version. It is also the first public version for 
 
 ---
 ## Optional Live Tracking
----
 **Settings -> Live timing -> Install tosu** downloads the *optional* Linux x86_64 helper directly from its official release. OST Verifies the pinned archive and the executable's SHA-256 before installing it under `~/.local/share/osu-skill-tracker/helpers/tosu` (or your `XDG_DATA_HOME`). The installation needs no administrator password(s). The helper is downloaded on demand, and is not included in the OST AppImage by default.
 
 **Exact tracking (tosu)** enables the experimental live capture. It remains off by default, including after installation (unless turned on before installing initially). OST starts its installed helper when the mode is on and stops it when the mode is turned off, or OST closes. An already running external tosu is used without taking ownership of it. You can start a new play after enabling the mode. The settings show the connection status and let you change tosu's local port (default 24050). No account token is required.
@@ -22,7 +21,6 @@ The first integration accepts supported default-mod OSU!standard scores only, ch
 ---
 
 ## Using the app
----
 The app detects common OSU! data directories, including `~/.local/share/osu`. Open **Settings** (The top-right gear button) to select or correct the directory. Select the **data folder**, not the folder holding the OSU! AppImage.
 
 - **Session** shows newly detected replays with play timestamps after the tracker started (The tracker starts by opening the app)
@@ -43,7 +41,6 @@ The app detects common OSU! data directories, including `~/.local/share/osu`. Op
 
 ---
 ## Versions and updates
----
 You can see what version you have installed by looking at the bottom right corner, and under **Settings -> Application**. The app looks for new builds on this repository on startup and every six hours if automatic checking is enabled via Settings.
 
 If the app fails to update for whatever reason, it will restore a temporary backup it makes before downloading the update to easily revert back to your working version.
@@ -52,7 +49,6 @@ When the app updates, it also publishes a new `update.json` beside the AppImage 
 
 ---
 ## Bug reports
----
 Bug reports are done inside of this repo's [Issues](https://github.com/Ali-Hammond/OSU-Skill-Tracker-Linux-Releases/issues/) tab. For a quick link, you can open **Settings -> Help -> Report a bug**. Clicking the link inside of the app is the best practice, as it will give you a pre-filled form to work from, instead of starting from scratch. A GitHub account is required. Make sure your report has the following before submission:
 - What happened
 - How to reporoduce
