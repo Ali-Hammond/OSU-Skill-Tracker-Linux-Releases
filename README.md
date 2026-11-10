@@ -1,10 +1,8 @@
 # OSU Skill Tracker (Linux)
----
 A native GTK 4 / libadwaita desktop app for browsing, analysing head timing, and exporting local OSU! replays. No OSU! account connection or API token is required. 
 
 Version `0.1.0` is the current version. It is also the first public version for release.
 
----
 ## Optional Live Tracking
 **Settings -> Live timing -> Install tosu** downloads the *optional* Linux x86_64 helper directly from its official release. OST Verifies the pinned archive and the executable's SHA-256 before installing it under `~/.local/share/osu-skill-tracker/helpers/tosu` (or your `XDG_DATA_HOME`). The installation needs no administrator password(s). The helper is downloaded on demand, and is not included in the OST AppImage by default.
 
@@ -17,8 +15,6 @@ OST's managed helper has separate configuration/data/cache folders, listens on l
 OST preserves fractional live hit errors locally under `$XDG_DATA_HOME/osu-skill-tracker/live-timing` (normally `~/.local/share/osu-skill-tracker/live-timing`).Complete captures are associated with the saved play and available in its details and JSON/CSV exports while the mode is enabled. Live results are labeled **Live UR**, ordinary reconstruction remains as **Sample UR**. Old replay files cannot recover original live precision.
 
 The first integration accepts supported default-mod OSU!standard scores only, checks capture counts against the saved score and matching map, and falls back to replay analysis for missing, incomplete or unsupported captures. Maps with spinners and misses currently fall back because the summary cannot identify which misses were spinners. I did do some testing with a live 32-circle Double Time play, which matched lazer's displayed mean error and UR. Other maps and mods still need to be verified. The settings name describes its purpose, and is not a guarentee of universal agreement.
-
----
 
 ## Using the app
 The app detects common OSU! data directories, including `~/.local/share/osu`. Open **Settings** (The top-right gear button) to select or correct the directory. Select the **data folder**, not the folder holding the OSU! AppImage.
@@ -39,7 +35,6 @@ The app detects common OSU! data directories, including `~/.local/share/osu`. Op
 - **The app never searches your whole computer**.
 - **OST does not inject code into OSU! or modify the game. Optional exact tracking uses tosu, a separate helper that reads the running game's memory to obtain precise timing data. Tosu is off by default.**
 
----
 ## Versions and updates
 You can see what version you have installed by looking at the bottom right corner, and under **Settings -> Application**. The app looks for new builds on this repository on startup and every six hours if automatic checking is enabled via Settings.
 
@@ -47,7 +42,6 @@ If the app fails to update for whatever reason, it will restore a temporary back
 
 When the app updates, it also publishes a new `update.json` beside the AppImage and checksum. It contains the release version, size, SHA-256, download URL, and changes
 
----
 ## Bug reports
 Bug reports are done inside of this repo's [Issues](https://github.com/Ali-Hammond/OSU-Skill-Tracker-Linux-Releases/issues/) tab. For a quick link, you can open **Settings -> Help -> Report a bug**. Clicking the link inside of the app is the best practice, as it will give you a pre-filled form to work from, instead of starting from scratch. A GitHub account is required. Make sure your report has the following before submission:
 - What happened
